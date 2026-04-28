@@ -12,6 +12,7 @@ export default defineConfig({
 
   plugins: [
     react(),
+    
     federation({
       name: "remoteApp",
       filename: "remoteEntry.js",
@@ -21,6 +22,7 @@ export default defineConfig({
       shared: ["react", "react-dom"],
     }),
   ],
+  base: '/REMOTE_APP/',
 
   build: {
     target: "esnext",
